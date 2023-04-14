@@ -1,8 +1,8 @@
 name: Daily regression tests
 
 on:
-  schedule:
-    - cron: '0 4,15 * * *'
+  # schedule:
+  #  - cron: '0 4,15 * * *'
   workflow_dispatch:
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
     name: "Regression test TF hub models"
     runs-on: ubuntu-20.04
     # Don't run this in everyone's forks.
-    if: github.repository == 'iree-org/iree-samples'
+    # if: github.repository == 'iree-org/iree-samples'
     steps:
       - name: Checking out repository
         uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3.3.0
